@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
+sys.path.append("/home/drfuser/prototype-demo/")
 from .config import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,7 +28,7 @@ SECRET_KEY = 'vbi5=-es%2q4jsk9#qogt&99r0tjclcu9&im&@akdbm+2#&%bo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = HOST_CONFIG['debug']
 
-ALLOWED_HOSTS = ['prototype0815-peiyuan.c9users.io']
+ALLOWED_HOSTS = ['seidm-prototype-demo-junghuang.c9users.io']
 
 
 # Application definition

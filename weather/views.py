@@ -14,7 +14,8 @@ class LightList(generics.ListAPIView):
         queryset = Light.objects.all()
         Region = self.request.query_params.get('Region', None)
         Date = self.request.query_params.get('Date', None)
-        if Region is not None and Date is not None:
+        Method=self.request.query_pqrams.get('Method',None)
+        if Region is not None and Date is not None and Method is not None:
             c=City.objects.get(cityname=Region)
             ft=Forecastingtime.objects.get(forecastingtime=Date)
             queryset = queryset.filter(c_id=c).filter(ft_id=ft)
